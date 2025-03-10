@@ -1,0 +1,23 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100vh;
+    background: #161513;
+    color: white;
+    font-family: 'outfit';
+    transform: scale(0.75);
+        /* Scale down to 75% */
+        transform-origin: top left;
+        /* Ensure scaling starts from the top-left corner */
+        width: 133.33%;
+        /* Compensate for scaling (100% / 0.75 = 133.33%) */
+        height: 133.33%;
+        /* Compensate for scaling */
+        overflow-x: hidden;
+        /* Prevent horizontal scrollbars */
+        max-height: 100vh;
+    
+}

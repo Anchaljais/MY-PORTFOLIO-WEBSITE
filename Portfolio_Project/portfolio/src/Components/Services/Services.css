@@ -1,0 +1,269 @@
+/* .services{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    margin: 80px 170px;
+}
+.services-title{
+    position: relative;
+}
+.services-title h1{
+    font-size: 0px 30px;
+    font-size: 80px;
+    font-weight: 600;
+}
+.services-title img{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+.services-format{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding: 60px;
+    border-radius: 10px;
+    border: 2px solid white;
+    transition: 0.4s;
+    cursor: pointer;
+}
+.services-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 80px;
+}
+
+.services-format h3{
+    font-size: 28px;
+    font-weight: 600;
+}
+.services-format h2{
+    font-size: 38px;
+    font-weight: 800;
+    background: linear-gradient(270deg, #DF8908 10%, #B415FF 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.services-format p{
+    color: #d4d4d4;
+    font-size: 24px;
+    line-height: 40px;
+    max-width: 300px;
+}
+.services-readmore{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-top: 20px;
+}
+.services-format:hover{
+    border: 2px solid #ff00ff;
+    background-image: linear-gradient(45deg,#3f0028,#582300);
+    transform: scale(1.05);
+    transition: 0.4s;
+} */
+
+
+.services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    margin: 80px 170px;
+}
+
+.services-title {
+    position: relative;
+}
+
+.services-title h1 {
+    font-size: 80px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.services-title img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 80px;
+}
+
+.services-format {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding: 60px;
+    border-radius: 10px;
+    border: 2px solid white;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.services-format.expanded {
+    transform: scale(1.05);
+    border: 2px solid #ff00ff;
+    background-image: linear-gradient(45deg, #3f0028, #582300);
+    padding: 80px 60px;
+}
+
+.services-format h3 {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.services-format h2 {
+    font-size: 38px;
+    font-weight: 800;
+    background: linear-gradient(270deg, #DF8908 10%, #B415FF 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.services-desc {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.skill-name {
+    font-size: 20px;
+    color: #d4d4d4;
+}
+
+.skill-level-bar {
+    width: 100%;
+    height: 8px;
+    background-color: #444;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.skill-level-progress {
+    height: 100%;
+    background: linear-gradient(90deg, #DF8908, #B415FF);
+    border-radius: 5px;
+    transition: width 0.4s ease;
+}
+
+.services-readmore {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.services-readmore p {
+    font-size: 20px;
+    font-weight: 500;
+    color: #d4d4d4;
+    margin: 0;
+    transition: all 0.3s ease;
+}
+
+.services-readmore img {
+    width: 20px;
+    height: 20px;
+    transition: all 0.3s ease;
+}
+
+.services-readmore:hover p {
+    color: #ff00ff;
+    transform: translateX(5px);
+}
+
+.services-readmore:hover img {
+    transform: translateX(5px);
+}
+
+
+/* Responsive Styles for max-width: 768px */
+@media (max-width: 768px) {
+    .services {
+        margin: 40px 20px;
+        /* Reduce margin for smaller screens */
+        gap: 40px;
+        /* Reduce gap between sections */
+    }
+
+    .services-title h1 {
+        font-size: 48px;
+        /* Reduce font size for smaller screens */
+    }
+
+    .services-container {
+        grid-template-columns: 1fr 1fr;
+        /* Change to 2 columns */
+        gap: 40px;
+        /* Reduce gap between items */
+    }
+
+    .services-format {
+        padding: 30px;
+        /* Reduce padding for smaller screens */
+    }
+
+    .services-format h3 {
+        font-size: 24px;
+        /* Reduce font size for smaller screens */
+    }
+
+    .services-format h2 {
+        font-size: 28px;
+        /* Reduce font size for smaller screens */
+    }
+
+    .services-desc {
+        display: none;
+        /* Hide skill descriptions on smaller screens */
+    }
+
+    .services-readmore {
+        display: none;
+        /* Hide "Read More" button on smaller screens */
+    }
+
+    .services-format.expanded {
+        transform: none;
+        /* Remove scale effect on smaller screens */
+        padding: 30px;
+        /* Keep padding consistent */
+        background-image: none;
+        /* Remove gradient background */
+        border: 2px solid white;
+        /* Keep border consistent */
+    }
+
+    .services-format:hover {
+        border: 2px solid #ff00ff;
+        /* Simple hover effect */
+        background-color: rgba(255, 255, 255, 0.1);
+        /* Light background on hover */
+    }
+}
